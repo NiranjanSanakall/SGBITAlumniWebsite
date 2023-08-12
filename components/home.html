@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../mystyles/style.css">
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+  <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+  <script src="../myscripts/home.js"></script>
+  <script src="../myscripts/alumniPosts.js"></script>
+  <script src="../myscripts/alumniWorkHistory.js"></script>
+  
+</head>
+<script>
+  if (!sessionStorage.getItem("loginStatus"))
+    window.location = "../index.html"
+</script>
+  <style>
+  #section1 {
+    height: 600px;
+  }
+  
+  #section2 {
+    height: 400px;
+  }
+  </style>
+
+<body>
+  <div id="section1">
+  <div style="display: flex; flex-direction:row; justify-content: space-between; background-color:rgb(247, 216, 175); height:80px; border-radius:10px; margin:10px">
+    <img src="../images/shivabasava.jpeg" style="display: flex; width:70px; height: 70px; border-radius:35px; margin:5px;"   alt="swamijiImage">
+    <h2 style="color:brown; margin:20px; margin-top:25px; font-family:Georgia, 'Times New Roman', Times, serif">Welcome to SGBIT- Alumni Group</h2>
+    <img src="../images/sgbitLogo.jpeg" style="display: flex; width:70px; height: 70px; border-radius:35px; margin:5px; margin-right:60px"  alt="Logo">
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav"></div>
+            </div> -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" id="home" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile" href="./profile.html">Update Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="HomeActivity" href="./viewActivity.html">View Activities</a>
+      </li>
+      <li class="nav-item">
+        <button id="alumniLogOut" class="btn btn-dark" style="margin-left: 970px;">LogOut</button>
+      </li>
+    </ul>
+  </nav>
+  <!-- <form> -->
+    <div  style="display: flex; " >
+      <div  style="margin: 20px 0px 0px 20px; display: inline-block; width:450px" >
+        <div>
+        <img src="../images/sgbitCollege.jpg" style="width: 400px; border-radius:12px; height:200px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);" alt="College image">
+        <select  style="margin: 20px 0px 0px 0px; width: 400px;" class="form-select" id="topic">
+          <option selected>Choose Topic for post</option>
+          <option >Improving Qulity Of Education</option>
+          <option >Enhancing Industry Institute interaction</option>
+          <option >Student Skill Development</option>
+          <option >Improving Placements</option>
+          <option >Promoting Internship Culture</option>
+        </select>
+        <textarea id="postText" rows="4" cols="50" style="width: 400px; height:100px; margin:10px 0px 10px 0px;" class="form-control" placeholder="Type your post here max 200 charecters"></textarea>
+        <div style="display: flex; flex-direction:row;">
+        <button class="btn btn-success m-2" id="sendPost">Send Post</button>
+        <button class="btn btn-warning m-2" id="viewPost">View Post</button>
+        <p id="msg" style="color: green; font-weight:bold; margin:12px;"></p>
+      </div>
+      </div>
+      </div>
+      <!-- <div class="form col"> -->
+        <div class="profileBox" style="display: inline-block;">
+          <ul id="profileList" class="list-group m-1" style=" list-style:none">
+  
+          </ul>
+        </div>
+        <div style="display: inline-block; margin:10px 0px 0px 20px " class="profileBox" >
+          <ul id="contributions" class="list-group m-1" style=" list-style:none">
+            <li style="margin: 20px; margin-left:5px;width:300px; font-weight:bold; color:yellow; background-color:brown; padding:10px; border-radius:5px;">How Can You Contribute</li>
+            <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="./donateAmt.html">Contribute Towards Development</a></li>
+            <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="./expertTalk.html">Deliver a Expert Talk</a></li>
+            <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="./internship.html">Provide Internship</a></li>
+            <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="./placements.html">Arrange For Placements</a></li>
+            <!-- <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="#">Provide carrier Guidance</a></li> -->
+            <li style="margin: 5px; font-weight:bold; color:yellow; background-color:rgb(68, 144, 92); padding:10px; border-radius:5px;"><a class=" link-light link-underline-opacity-0" href="#"><button id="history" class="btn btn-warning">View Work History</button></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- </div> -->
+  <!-- </form> -->
+  <div id="section2">
+  <ul id="historyList" style="list-style:none; align-items:center" class="list-group m-1" >
+    <!-- <li class="list-group-item m-2">hello</li> -->
+  </ul>
+</div>
+</body>
+
+</html>

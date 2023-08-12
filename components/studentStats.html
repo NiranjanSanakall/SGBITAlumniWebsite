@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <link rel="stylesheet" href="../mystyles/style.css">
+    <script src="../node_modules/pdfjs-dist/build/pdf.min.js"></script>
+    <script src="../node_modules/pdfjs-dist/build/pdf.worker.min.js"></script>
+    <script src="../myscripts/hodView.js"></script>
+    <script src="../myscripts/genStat.js"></script>
+    <script src="../node_modules/Easy-Table-List-Pagination-Plugin-With-jQuery-Paginathing/dist/paginathing.min.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <div class="border1" style="margin-top: 10px; ">
+    <h2>Alumni Statistics</h2>
+    <ul id="stat" class="list-group" style="list-style: none; margin:20px;">
+
+    </ul>
+    <button id="backForGenStats"  class="btn btn-dark m-2">Back</button>
+</div>
+
+</body>
+</html>

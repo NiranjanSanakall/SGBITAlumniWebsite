@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./mystyles/style.css">
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.session.js"></script>
+  <script src="./node_modules/jquery-dateformat/src/dateFormat.js"></script>
+  <script src="./node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+  <script src="./myscripts/registerAlumni.js"></script>
+  <script src="./myscripts/authenticateUser.js"></script>
+  <script src="./myscripts/forgotPwd.js"></script>
+  <script src="./myscripts/dispalyEvents.js"></script>
+</head>
+
+<body>
+<div style="display: flex; flex-direction:row; justify-content:space-between;  background-color:rgb(241, 214, 179); height:9vw; padding:0.45rem; border-radius:10px; margin:5px; margin-top:10px;">
+  <div style="display: flex; flex-direction:row">
+   <img src="./images/sgbitLogo.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-top:15px;"  alt="Logo">
+  <img src="./images/shivabasava.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-top:15px;"   alt="swamijiImage">
+  <div style="display: flex; flex-direction:column;">
+    <p style="margin:0px 0px -5px 10px;  color:brown">Principal</p>
+  <img src="./images/principal.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin-top:0px;"   alt="principalImage">
+  <p style="margin:-5px 0px 0px -20px;  color:brown">Dr. B.S. Patagundi</p>
+  </div>
+  </div>
+  <div style="display: flex; flex-direction:column; width: 900px;">
+    <div style="display: flex; flex-direction:row; justify-content:space-between;color:brown; margin-bottom:-15px">
+    <p>S. S. Education Trust's</p>
+    <p>CET Code: E-175(UG)/T-942(PG)</p>
+  </div>
+  <h3 style="color:brown; margin:0px; margin-top:0px; font-family:Georgia, 'Times New Roman', Times, serif">S. G. BALEKUNDRI INSTITUTE OF TECHNOLOGY</h3>
+  <p style="margin-bottom:0px; color:brown;">shivabasavanagar, Belagavi- 590 010, Karnataka-India</p>
+  <div style="display: flex; flex-direction:row; color:brown; justify-content:space-between">
+  <p>Office: 0831-2407172,2554559</p>
+  <p>Fax: 0831-2407152</p>
+  <p style="margin-right: 38px;">Website: www.sgbit.edu.in</p>
+</div>
+  </div>
+  <img src="./images/jFTSLogo.jpg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-right:30px; margin-top:15px;"  alt="Logo">
+</div>
+<h6 style="color: rgb(232, 78, 93); font-size:12px; margin:0px; margin-left:1050px" >Powered by : jFork Technology Services, Belagavi</h6>
+<div style="display: flex; flex-direction:column">
+<div style="display:flex; flex-direction:row; margin: 0px 50px">
+  <div style="margin-top:20px">
+    <ul style="color:blue">
+      <li style="margin-left:-35px; ">Alumni Connect</li>
+      <li style="margin-left:-35px;">Alumni Interaction</li>
+      <li style="margin-left:-35px;">Alumni Day</li>
+      <li style="margin-left:-35px;">Alumni Activities</li>
+      <li style="list-style: none;">&nbsp</li>
+      <li style="margin-left:-60px; list-style:none; padding:10px; width:200px;height:40px;background-color:yellow;color:red;font-weight:bolder;">Alumni Coordinator :</li>
+      <img src="./images/acord.jpg" width="200px" style="margin:10px;border-radius:5px; margin-left:-60px; " height="200px" alt="">
+      <li style="margin-left:-70px; list-style:none; padding:5px; width:220px;height:40px;background-color:yellow;color:red;font-weight:bolder; font-size:15px;"> Prof. Sharanabasappa Zampa</li>
+    </ul>
+   </div>
+  <div class="box" style="margin-left:15px; width:38.19vw;">
+    <input type="text" id="login1" class="form-control w-100 m-2" placeholder="Enter Login/Mobile No./Email Id">
+    <input type="password" id="pwd1" class="form-control w-50 m-2" placeholder="Enter Password">
+    <p id="msg" style="color:red;font-style:bold"></p>
+    <button id="btn1" class="btn btn-primary m-2">Login</button>
+    <button id="btn2" class="btn btn-primary m-2">Register New User</button>
+    <p style="margin:5px 0px 0px 15px"><a class=" link-danger" id="forgotPassword" href="#">Forgot Password</a></p>
+  </div>
+  <div>
+    <img src="./images/sgbitCollege.jpg" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2); height:18.5vw; width:32.41vw; margin-top:20px; border-radius:5px" alt="AlumniNewsImage">
+  </div>
+  <!-- <div style="display:flex;flex-direction:column;color:orange;width:200px"> -->
+  <marquee width="30%" direction="up" height="180px" style="margin-top: 80px; margin-left:10px">
+    <ul id="anouncements" style="list-style:square;color:tomato">
+      <h6 style="margin-top: 20px; margin-left:-10px;">Alumni News</h6>
+      
+    </ul>
+    </marquee>
+  <!-- </div> -->
+  </div>
+  <div class="" style="display:flex; flex-direction:row; width:auto; height:auto; margin-top: -150px; margin-bottom:40px; margin-left:280px; margin-right:20px; background-color:white; border:2px solid grey; border-radius:10px; padding:10px; ">
+    <!-- <img src="./images/aid.png" alt="alumniDay" height="120px" width="500px" style="margin-left: 10px; object-fit:cover;"> -->
+    
+    <table class="table">
+      <thead>
+        <tr class="table-primary m-1" style="padding:0px">
+          <th scope="col"><img src="./images/alumniDayLogo.jpg" alt="logo" width="50px" height="50px"></th>
+          <th scope="col">INSTITUTE</th>
+          <th scope="col">CSE</th>
+          <th scope="col">AIDS</th>
+          <th scope="col">ECE</th>
+          <th scope="col">EEE</th>
+          <th scope="col">CIVIL</th>
+          <th scope="col">MECH</th>
+          <th scope="col">CSBS</th>
+        </tr>
+      </thead>
+      <tbody id="alumniDays">
+        <tr class="table-warning m-1">
+          <td style="width:100px;">Alumni Day</td>
+          <td id="InstituteAlumniDay">25/02/2023</td>
+          <td id="CseAlumniDay">25/02/2023</td>
+          <td id="AidsAlumniDay">25/02/2023</td>
+          <td id="EceAlumniDay">25/02/2023</td>
+          <td id="EeeAlumniDay">25/02/2023</td>
+          <td id="CivilAlumniDay">25/02/2023</td>
+          <td id="MechAlumniDay">25/02/2023</td>
+          <td id="CsbsAlumniDay">25/02/2023</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <p style="margin: 20px 0px 0px 80px; font-weight:bold; font-size:18px; color:rgb(0, 136, 255)">Alumni Day is going to be held on : <span id="displayDate"></span><br>At : <span id="displayTime"></span><br><br>For<span id="displayBranch"></span> Venue : <span id="displayVenue"></span></p> -->
+  </div>
+</div>
+
+  <div style="display: flex; align-items:col;">
+
+  
+  <br>
+  <div style="margin-left: 30px;">
+  <h3 style="color: blueviolet; ">About SGBIT Alumni </h3>
+  <p style="text-align:justify;">The SGBIT alumni establishes a strong and lasting relationship with its passed out students and harness their skill and expertise in
+    their respective domain to guide the students in their early stage of their engineering. The alumni students who
+    hold prominent positions in the industry can guide the students by providing the knowledge about the best practices
+    in industry, provide internship and job opportunities. Further, they can visit their almameter and give lectures on
+    diverse subjects. The institute organalizes alumni day every year to bring the memories of the past and welcome suggestions
+    from the alumni and further improve the stature of the institute. All suggestions which would bring overall improvement in the functioning of the
+    institute and enhance the quality of teaching learning and also the enhance the placement opportunities of the students currently
+    studying in the institute.
+  </p>
+  <h3 style="color: blueviolet;">Alumni Objectives</h3>
+  <ul>
+    <li>Foster better ties with Alumni Students</li>
+    <li>Seek valuable inputs to improve the Quality of Education</li>
+    <li>Create internship and job opportuinites for the students</li>
+    <li>Organize Lectures and workshops to educate the faculty and students</li>
+    <li>Improve the Industry Institute Interaction</li>
+  </ul>
+ 
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <link rel="stylesheet" href="../mystyles/style.css">
+    <script src="../node_modules/pdfjs-dist/build/pdf.min.js"></script>
+    <script src="../node_modules/pdfjs-dist/build/pdf.worker.min.js"></script>
+    <script src="../myscripts/alumniPosts.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <ul class="list-group m-1" id="allPosts">
+
+    </ul>
+    <button id="backForPost" style="margin-left:1280px;"  class="btn btn-dark" >Back</button>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+.mainBox{
+    margin: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    /* background-color:none */
+    background-color: rgb(165, 239, 215);
+    
+    
+}
+.mainBox1{
+    margin: 25px 0px 0px 350px;
+    background-color: white;
+    padding: 30px;
+    width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    /* background-color:none */
+    /* background-color: rgb(165, 239, 215); */
+}
+.box{
+  width:41.66vw;
+  height:18.5vw;
+  /* border-style: solid;
+  border-color: orange; */
+  margin:20px;
+  padding:20px;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    
+
+
+}
+.border1{
+    width: 1300px;
+    height: 500px;
+    border: 5px solid red;
+    position:absolute;
+    margin-left: 30px;
+    padding:30px 30px 30px 30px;
+    border-radius: 12px;
+}
+body{
+    background-color: rgb(247, 239, 251);
+}
+label{
+    font-size: 15px;
+    font-style:italic;
+   
+}
+input{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.box1{
+    width:1320px;
+    height:auto;
+    visibility:hidden;
+    border-style: solid;
+    background-color: orange;
+    border-color: red;
+    margin: 5px 20px;
+    border-radius: 0.25rem;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4); */
+  }
+
+  .ui-widget-header {
+    background: blue;
+    border: 2px solid #DDDDDD;
+    color: #333333;
+    font-weight: bold;
+    }
+    .progress-label {
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    color: #a4fd00;
+    }
+
+  /*  body {
+        font-size: 16px;
+      }
+      
+       Example media query for larger screens 
+      @media (min-width: 768px) {
+        body {
+          font-size: 18px;
+        }
+      }*/
+    

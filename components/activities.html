@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyles/style.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/activityRegister.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <h2
+        style="display: flex; justify-content:center; font-family:Georgia, 'Times New Roman', Times, serif; margin-top:10px; color:red">
+        Register Upcoming Activities</h2>
+    <div class="mainBox1" >
+        <div style="display: flex; flex-direction:col;">
+            <div style="display: flex; flex-direction:row;">
+                <div style="display: flex; width:800px;">
+                    <div class="form col">
+                        <div class="form-group">
+                            <!-- <label for="fname">Activity Name</label> -->
+                            <input type="text" id="aname" class="form-control w-75 m-3"
+                                placeholder="Enter Activity Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="activityDesc" cols="30" rows="5" class="form-control m-3 w-75"
+                                style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);"
+                                placeholder="Enter Description of activity"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="rname">Resource Person</label> -->
+                            <input type="text" id="rname" class="form-control w-75 m-3"
+                                placeholder="Enter Resource Person Name">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="rname">Resource Person</label> -->
+                            <input type="text" id="rcname" class="form-control w-75 m-3"
+                                placeholder="Enter Resource Person company Name">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="dateOfActivity">Date of Activity</label> -->
+                            <input type="date" id="dateOfActivity" class="form-control w-50 m-3">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="timeOfActivity">Time Of Activity</label> -->
+                            <input type="time" id="timeOfActivity" class="form-control w-50 m-3" value="09:30">
+                        </div>
+                    </div>
+                    <div class="form col">
+                        <img src="../images/ActivityImg.jpg" width="250px" height="250px" alt="activityImg">
+                    </div>
+                </div>
+            </div>
+    </div>
+                <div style="display: flex; flex-direction:row; height:60px; ">
+                    <div class="form-group">
+                        <!-- <label for="department">Select Department</label> -->
+                        <select class="form-control m-3" id="department">
+                            <option selected>Select Department</option>
+                            <option>CSE</option>
+                            <option>ECE</option>
+                            <option>EE</option>
+                            <option>MECH</option>
+                            <option>AIDS</option>
+                            <option>CSBS</option>
+                            <option>CIVIL</option>
+                            <option>College Level Event</option>
+                        </select>
+                    </div>
+                <div class="form-group" style="display: flex;  margin-left:40px; margin-top:10px;">
+                    <button id="add" class="btn btn-warning m-1">Add Activity</button>
+                    <input class="btn btn-secondary m-1" type="reset" value="Reset">
+                    <input class="btn btn-dark m-1" id="backForActivityRegister" type="button" value="Back">
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+
+</html>

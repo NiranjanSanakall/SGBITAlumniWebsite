@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyles/style.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="../myscripts/registerAlumni.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <h1 style="display:flex; justify-content: center; color:rgb(136, 0, 255); font-style:italic">Alumni Registration
+    </h1>
+    <div class="mainBox" style="margin: 0px 300px;">
+        <form action="http://localhost:8000/api/photo" id="uploadForm" method="post" enctype="multipart/form-data"
+            >
+
+            <div class="form row">
+                <div class="form col" style="padding:20px 20px 20px 40px; margin-right: -60px">
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" class="form-control w-75" placeholder="Enter your firstName" value="abc">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" class="form-control w-75" placeholder="Enter your lastName" value="abc">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Your Gender</label>
+                        <select id="gender" class="form-select w-75">
+                            <option selected>Choose your Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="passingYear">Enter Your Passing Year</label>
+                        <select id="passingYear" class="form-select w-75">
+                            <option selected>Choose your passing Year</option>
+                            <option>2008</option>
+                            <option>2009</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Choose category</label>
+                        <select id="category" class="form-select w-75">
+                            <option selected>Choose category</option>
+                            <option>GM</option>
+                            <option>SC</option>
+                            <option>ST</option>
+                            <option>OBC</option>
+                            <option>Minority</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cellNo">Enter your Phone Number</label>
+                        <input type="number" id="cellNo" placeholder="Phone No." class="form-control w-50" value="98512">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control w-75" id="Email" placeholder="Enter Your Email" value="abc@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Present Working company</label>
+                        <input type="text" class="form-control w-75" id="companyName" placeholder="Company Name" value="abc">
+                    </div>
+                </div>
+                <div class="form col" style="padding:20px 20px 20px 0px; margin-right: -60px">
+
+                    <div class="form-group">
+                        <label for="branchName">Enter Your Branch</label>
+                        <select id="branchName" class="form-select w-75">
+                            <option selected>Choose your Branch</option>
+                            <option>CSE</option>
+                            <option>ECE</option>
+                            <option>EEE</option>
+                            <option>CIVIL</option>
+                            <option>MECH</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Your City</label>
+                        <select id="city" class="form-select w-75">
+                            <option selected>Choose your working city</option>
+                            <option>Bengaluru</option>
+                            <option>Belgaum</option>
+                            <option>Chennai</option>
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                            <option>Pune</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image">Upload Your Image</label>
+
+                        <HTML5 file upload selector>
+                            <input id="fileInput" type="file" name="file" class="form-control w-75"
+                                placeholder="Image Url">
+                                <div style="width:75%" id = "pbid">
+                                    <div class = "pbc" >
+                                    <!-- Loading... -->
+                                    </div>
+                                    </div>                                    
+                            <!-- <input type="button" id="photoUpload" class="btn btn-sm btn-success m-1" value="Upload"> -->
+                            <span id="status"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="domain">You are expert in</label>
+                        <select id="domain" class="form-select w-75">
+                            
+                        </select>
+                    </div>
+
+                    <div class="form-group m-2 w-100">
+                        <input type="text" class="form-control w-50" id="other" style="visibility:hidden"
+                            placeholder="Your Domain">
+                    </div>
+                    <div class="form-group">
+                        <label for="id">Enter Your Email Id/Mobile No.</label>
+                        <input type="text" class="form-control w-50" id="id" placeholder="Your Email Id/mobile no.">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Enter Your password</label>
+                        <input type="password" class="form-control w-50" id="pwd" placeholder="password">
+                    </div>
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content:center; align-items:center">
+                <input class="btn btn-secondary m-2" type="reset" value="Reset">
+                <input type="button" id="registerAlumni" class="btn btn-primary m-2" value="Submit">
+                <input class="btn btn-dark m-2" id="backRegisterAlumni" type="button" value="Back">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

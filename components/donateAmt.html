@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/donateAmount.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<script>
+  if (!sessionStorage.getItem("loginStatus"))
+      window.location = "../index.html"
+</script>
+<body>
+    <div class="form-group" style=" margin:30px 250px 0px 250px; padding:20px 50px 50px 50px; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);">
+        <h2 style="color: red; margin:0px 0px 20px 0px;">Contribution Towards Institute Development</h2>
+        <div style="display: flex; flex-direction:row; height: 55px;">
+        <select id="donationTowards" class="form-select" style="margin: 8px 8px 8px 0px; width:200px;">
+            <option selected>Donate Towards</option>
+            <option>Student Scholarship</option>
+            <option>Setting-up Lab</option>
+            <option>Research and Development</option>
+            <option>Infrastructure Development</option>
+            <option>Faculty Welfare</option>
+            <option>Any Of These</option>
+            
+        </select>
+        <input type="text" id="donationAmt" class="form-control" style="margin: 8px 8px 8px 0px; width:230px;" placeholder="Enter Donation Amount">
+        <button id="donate"  class="btn btn-warning m-2">Proceed to Donate</button>
+        <button id="backToAlumniHome"  class="btn btn-dark m-2">Back</button>
+    </div>
+    <div style=" margin-top:30px;">
+    <center>
+    <button type="button" class="btn btn-primary m-1" id="btn-1000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>1000
+      </button>
+    <button type="button" class="btn btn-primary m-1" id="btn-2000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>2000
+      </button>
+    <button type="button" class="btn btn-primary m-1" id="btn-5000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>5000
+      </button>
+    <button type="button" class="btn btn-primary m-1" id="btn-10000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>10000
+      </button><br>
+    <button type="button" class="btn btn-primary m-1" id="btn-25000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>25000
+      </button>
+    <button type="button" class="btn btn-primary m-1" id="btn-50000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>50000
+      </button>
+    <button type="button" class="btn btn-primary m-1" id="btn-100000">
+        <span class="badge text-bg-light m-1"><i class="bi bi-currency-rupee"></i></span>100000
+      </button>
+    </center>
+    </div>
+    </div>
+</body>
+</html>

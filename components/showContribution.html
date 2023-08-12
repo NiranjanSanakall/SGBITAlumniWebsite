@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../mystyles/style.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../myscripts/showContribution.js"></script>
+    <script src="../myscripts/hodView.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <div style="display: flex; flex-direction:row; justify-content:space-between;  background-color:rgb(241, 214, 179); height:9vw; padding:5px; border-radius:10px; margin:5px; margin-top:10px;">
+        <div style="display: flex; flex-direction:row">
+          <img src="../images/sgbitLogo.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-top:15px;"  alt="Logo">
+        <img src="../images/shivabasava.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-top:15px;"   alt="swamijiImage">
+        <div style="display: flex; flex-direction:column">
+        <img id="hodImage" src="../images/Hod.jpeg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-top:15px;"   alt="principalImage">
+          <p id="hodName" style="display:inline-block; width:180px; margin:-10px 0px 0px -30px; color:brown">Hod</p>
+        </div>
+        </div>
+        <div style="display: flex; flex-direction:column; width: 900px;">
+          <div style="display: flex; flex-direction:row; justify-content:space-between;color:brown; margin-bottom:-15px">
+          <p>S. S. Education Trust's</p>
+          <p>CET Code: E-175(UG)/T-942(PG)</p>
+        </div>
+        <h3 style="color:brown; margin:0px; margin-top:0px; font-family:Georgia, 'Times New Roman', Times, serif">S. G. BALEKUNDRI INSTITUTE OF TECHNOLOGY</h3>
+        <p style="margin-bottom:0px; color:brown;">shivabasavanagar, Belagavi- 590 010, Karnataka-India</p>
+        <div style="display: flex; flex-direction:row; color:brown; justify-content:space-between">
+        <p>Office: 0831-2407172,2554559</p>
+        <p>Fax: 0831-2407152</p>
+        <p style="margin-right: 38px;">Website: www.sgbit.edu.in</p>
+      </div>
+        </div>
+        <img src="../images/jFTSLogo.jpg" style="display: flex; width:80px; height: 80px; border-radius:40px; margin:5px; margin-right:30px; margin-top:15px;"  alt="Logo">
+      </div>
+      <button class="btn btn-dark" id="backForContribution" style="margin-left: 1270px;">Back</button>
+    <div class="box1">
+    <ul class="list-group m-1" style="list-style-type: none;" id="monetaryContribution">
+        
+    </ul>
+    <ul class="list-group m-1" style="list-style-type: none;" id="expertTalkList">
+
+    </ul>
+    <ul class="list-group" style="list-style-type: none;" id="internshipList">
+
+    </ul>
+    <ul class="list-group" style="list-style-type: none;"  id="placementsList">
+
+    </ul>
+</div>
+</body>
+</html>

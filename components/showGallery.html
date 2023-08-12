@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../mystyles/slider.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/galleryImgs.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <div class='container'>
+        <header>
+             <div id='slider'>
+                 <ul class='slides' id="ImgList">
+                     <!-- <li class='slide'><img class='img1' width="900px"  height="800px" src='../AllImgs/4000photo.png'/></li> -->
+                     <!-- <li class='slide'><img class='img1' width="900px"   height="800px" src='../HodPhotos/acord.jpg'/></li>
+                     <li class='slide'><img class='img1' width="900px"  height="800px" src='../HodPhotos/EceHod.jpeg'/></li>  
+                     <li class='slide'><img class='img1' width="900px"  height="800px" src='../HodPhotos/AidsHod.jpeg'/></li> -->
+                 </ul>
+             </div> 
+             
+         </header>
+         
+     </div>
+     <button style="margin-left: 1250px;" class="btn btn-dark" id="backForGalleryImgs" >Back</button>
+</body>
+</html>

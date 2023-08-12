@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/alumniContribution.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <div class="form-group" style=" margin:30px 300px 0px 300px; padding:20px 50px 50px 50px; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);">
+        <h2 style="color: red; margin:0px 0px 20px 0px;">Expert Talk/Carrier Guidence</h2>
+        <input type="text" id="expSubject" style="margin: 0px 0px 10px 0px" class="form-control w-75" placeholder=" Enter Subject">
+        <textarea style="margin: 0px 0px 10px 0px;" class="form-control" id="expMessage" cols="30" rows="5" placeholder="Enter message"></textarea>
+        <!-- <input type="text" id="mailLink" style="margin: 0px 0px 0px 0px" class="form-control w-75" placeholder="Attach Link"> -->
+        <div style="display: flex; flex-direction:row; height: 55px;">
+        <select id="selectTargets" class="form-select" style="margin: 8px 8px 8px 0px; width:200px;">
+            <option selected>Add Target Audience</option>
+            <option>All</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>CIVIL</option>
+            <option>MECH</option>
+            <option>AIDS</option>
+            <option>CSBS</option>
+            <option>Clear All</option>
+        </select>
+        <input type="text" id="targets" class="form-control" style="margin: 8px 8px 8px 0px; width:380px;" placeholder="Target Audience" disabled>
+    </div>
+        <div style="margin-left: 350px;">
+        <!-- <button id="addAudienceBtn"  class="btn btn-warning m-1">Add Audience</button> -->
+        <button id="sendMailForExpertTalk"  class="btn btn-success m-1">Send Mail</button>
+        <button id="backForSendMessage"  class="btn btn-dark m-1">Back</button>
+        </div>
+   
+    </div>
+</body>
+</html>

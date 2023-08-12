@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/addingImgs.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <!-- <form action="http://localhost:8000/api/photo" id="uploadForm" method="post" enctype="multipart/form-data"> -->
+    <div class="form-group" style=" margin:30px 400px 0px 400px; padding:25px 25px 25px 20px; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);">
+        <h2 style="color: red; margin-left:30px;">Change Your Password Here</h2>
+        <HTML5 file upload selector>
+        <input type="file" id="imgInput" style="margin: 25px 0px 0px 0px" class="form-control w-50" placeholder="choose image">
+        <textarea id="imgDesc" style="margin:10px 0px 0px 0px" rows="5" cols="30" class="form-control"></textarea>
+        <p id="imgStatus"></p>
+        <button id="addImgBtn" style="margin:10px 0px 0px 0px" class="btn btn-success">Submit</button>
+        <button id="backForAddImg" style="margin:10px 0px 0px 380px" class="btn btn-dark">Back</button>
+        
+    </div>
+    <!-- </form> -->
+</body>
+</html>

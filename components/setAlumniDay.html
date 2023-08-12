@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/dateFormat.js"></script>
+    <script src="../node_modules/jquery-dateformat/src/jquery.dateFormat.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.session.js"></script>
+    <script src="../myscripts/displayAlumniDay.js"></script>
+</head>
+<script>
+    if (!sessionStorage.getItem("loginStatus"))
+        window.location = "../index.html"
+</script>
+<body>
+    <div class="form-group" style=" margin:30px 400px 0px 400px; padding:25px 25px 25px 90px; box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);">
+        <h2 style="color: red; margin:0px 0px 0px 50px;">Set <span id="branchForAlumniDay"></span> Alumni Day</h2>
+        <input type="date" id="alumniDayDate" style="margin: 25px 0px 0px 70px" class="form-control w-50" placeholder="Enter alumni Day Date">
+        <input type="time" id="alumniDayTime" style="margin: 25px 0px 0px 70px" class="form-control w-50" placeholder="Enter alumni Day Time" value="09:30">
+        <!-- <input type="text" id="alumniDayForBatch" style="margin: 25px 0px 0px 70px" class="form-control w-50" placeholder="Enter Batch for alumni Day "> -->
+        <input type="text" id="alumniDayVenue" style="margin: 25px 0px 0px 70px" class="form-control w-50" placeholder="Enter alumni Day Venue" value="SGBIT Auditorium">
+        <button id="setAlumniDayBtn" style="margin:20px 0px 0px 70px" class="btn btn-warning">Set Alumni Day</button>
+        <button id="backForAlumniDay" style="margin:20px 0px 0px 30px" class="btn btn-dark">Back</button>
+    </div>
+</body>
+</html>
